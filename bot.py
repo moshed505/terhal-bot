@@ -1,7 +1,8 @@
 from telegram import Update, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 
-TOKEN = "ضع_توكن_البوت_هنا"
+import os
+TOKEN = os.environ["TOKEN"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
